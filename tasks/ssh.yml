@@ -18,7 +18,8 @@
     - dotfiles
     - install
     - ssh
-- name: Install ssh key public
+- name: Install public ssh key
+  become: true
   copy:
     src: "{{ source_key }}.pub"
     dest: "{{ dest_key }}.pub"
