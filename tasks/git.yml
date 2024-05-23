@@ -4,11 +4,11 @@
     scope: global
     value: "bearjordan@gmail.com"
   tags:
-  - git-personal
+  - git
 - name: Git personal setup name
   git_config:
     name: user.name
     scope: global
     value: "bear-jordan"
   tags:
-  - git-personal
+  - git

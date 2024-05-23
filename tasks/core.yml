@@ -4,7 +4,7 @@
     name: ["build-essential", "cmake", "pkg-config", "libpthread-stubs0-dev"]
   tags:
     - install
-    - neovim
+    - nvim
     - core
 
 - name: Install System Packages 2 (lua, unzip, libtool, libtool-bin, gettext)
@@ -13,7 +13,7 @@
     name: [ "lua5.1", "unzip", "libtool", "libtool-bin", "gettext"]
   tags:
     - install
-    - neovim
+    - nvim
     - core
 
 - name: Install System Packages 3 (the rest)

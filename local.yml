@@ -16,17 +16,41 @@
   tasks:
     - name: build ssh
       ansible.builtin.include_tasks: tasks/ssh.yml
+      tags:
+        - ssh
+        - install
     - name: build git
       ansible.builtin.include_tasks: tasks/git.yml
+      tags:
+        - git
+        - install
     - name: build core
       ansible.builtin.include_tasks: tasks/core.yml
+      tags:
+        - core
+        - install
     - name: build zsh
       ansible.builtin.include_tasks: tasks/zsh.yml
+      tags:
+        - zsh
+        - install
     - name: build nvim
       ansible.builtin.include_tasks: tasks/nvim.yml
+      tags:
+        - nvim
+        - install
     - name: build dotfiles
       ansible.builtin.include_tasks: tasks/dotfiles.yml
+      tags:
+        - dotfiles
+        - install
     - name: build productivity tools
       ansible.builtin.include_tasks: tasks/productivity-tools.yml
+      tags:
+        - productivity-tools
+        - install
     - name: build lsp
       ansible.builtin.include_tasks: tasks/lsp.yml
+      tags:
+        - lsp
+        - install
