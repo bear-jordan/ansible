@@ -15,18 +15,18 @@
       - core
   tasks:
     - name: build ssh
-      include_task: tasks/ssh.yml
+      ansible.builtin.include_task: tasks/ssh.yml
     - name: build git
-      include_task: tasks/git.yml
+      ansible.builtin.include_task: tasks/git.yml
     - name: build core
-      include_task: tasks/core.yml
+      ansible.builtin.include_task: tasks/core.yml
     - name: build zsh
-      include_task: tasks/zsh.yml
+      ansible.builtin.include_task: tasks/zsh.yml
     - name: build nvim
-      include_task: tasks/nvim.yml
+      ansible.builtin.include_task: tasks/nvim.yml
     - name: build dotfiles
-      include_task: tasks/dotfiles.yml
+      ansible.builtin.include_task: tasks/dotfiles.yml
     - name: build productivity tools
-      include_task: tasks/productivity-tools.yml
+      ansible.builtin.include_task: tasks/productivity-tools.yml
     - name: build lsp
-      include_task: tasks/lsp.yml
+      ansible.builtin.include_task: tasks/lsp.yml
