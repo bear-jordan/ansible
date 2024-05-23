@@ -14,6 +14,7 @@
       - install
       - core
   tasks:
+<<<<<<< Updated upstream
    - name: Include ssh
         ansible.builtin.include_tasks:
           file: task/ssh.yml    
@@ -38,3 +39,13 @@
    - name: Include lsp
         ansible.builtin.include_tasks:
           file: task/lsp.yml    
+=======
+    - include_task: tasks/ssh.yml
+    - include_task: tasks/git.yml
+    - include_task: tasks/core.yml
+    - include_task: tasks/zsh.yml
+    - include_task: tasks/nvim.yml
+    - include_task: tasks/dotfiles.yml
+    - include_task: tasks/productivity-tools.yml
+    - include_task: tasks/lsp.yml
+>>>>>>> Stashed changes
