@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Check if script is run as root
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root"
+    exit
+fi
+
+# Ask for the new username
+read -p "Enter the new username: " USERNAME
+
+# Add the user
+adduser $USERNAME
+
+# Add the user to the sudo group
+usermod -aG sudo $USERNAME
+
+echo "User $USERNAME added successfully with sudo privileges."
