@@ -1,13 +1,19 @@
   - name: Setup zsh
     become: true
     apt: name=zsh
-    tags: zsh
+    tags:
+      - core
+      - zsh
   - name: Change Shell
     become: true
     shell: chsh -s `which zsh` 
-    tags: zsh
+    tags:
+      - core
+      - zsh
   - name: Install zoxide
     become: true
     apt:
       name: ["zoxide", "fzf"]
-    tags: zsh
+    tags:
+      - core
+      - zsh

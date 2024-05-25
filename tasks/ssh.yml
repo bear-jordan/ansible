@@ -7,8 +7,7 @@
     group: "{{ lookup('env', 'USER') }}"
   become: true
   tags:
-    - dotfiles
-    - install
+    - core
     - ssh
 - name: Install ssh key
   copy:
@@ -17,8 +16,7 @@
     mode: 0600
   become: true
   tags:
-    - dotfiles
-    - install
+    - core
     - ssh
 - name: Install public ssh key
   become: true
@@ -27,8 +25,7 @@
     dest: "{{ dest_key }}.pub"
     mode: 0644
   tags:
-    - dotfiles
-    - install
+    - core
     - ssh
 - name: Set authorized key took from file
   authorized_key:
@@ -38,6 +35,5 @@
   with_fileglob:
   - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
   tags:
-    - dotfiles
-    - install
+    - core
     - ssh

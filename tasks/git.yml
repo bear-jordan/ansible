@@ -4,6 +4,7 @@
     scope: global
     value: "bearjordan@gmail.com"
   tags:
+  - core
   - git
 - name: Git personal setup name
   git_config:
@@ -11,4 +12,5 @@
     scope: global
     value: "bear-jordan"
   tags:
+  - core
   - git

@@ -1,3 +1,6 @@
+# Run core
+# Run install
+
 - hosts: localhost
   vars:
     source_key: "./.ssh/id_ed25519"
@@ -11,29 +14,27 @@
       update_cache: true
       state: present
     tags:
-      - install
       - core
   tasks:
     - name: build ssh
       ansible.builtin.include_tasks: tasks/ssh.yml
       tags:
         - ssh
-        - install
+        - core
     - name: build git
       ansible.builtin.include_tasks: tasks/git.yml
       tags:
         - git
-        - install
+        - core
     - name: build core
       ansible.builtin.include_tasks: tasks/core.yml
       tags:
         - core
-        - install
     - name: build zsh
       ansible.builtin.include_tasks: tasks/zsh.yml
       tags:
         - zsh
-        - install
+        - core
     - name: build nvim
       ansible.builtin.include_tasks: tasks/nvim.yml
       tags:
