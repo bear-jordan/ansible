@@ -9,7 +9,7 @@
     personal: "{{ lookup('env', 'HOME') }}/personal"
   tasks:
     - name: build ssh
-      ansible.builtin.include_tasks: tasks/homebrew.yml
+      ansible.builtin.include_tasks: tasks/ssh.yml
       tags:
         - homebrew
         - core
