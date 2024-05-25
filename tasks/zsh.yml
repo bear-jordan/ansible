@@ -6,8 +6,7 @@
     become: true
     shell: chsh -s `which zsh` 
     tags: zsh
-  - name: Install zinit and zoxide
+  - name: Install zoxide
     become: true
-    apt:
-      name: ["zinit", "zoxide"]
+    apt: zoxide
     tags: zsh
