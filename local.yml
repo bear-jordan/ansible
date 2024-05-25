@@ -7,19 +7,27 @@
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
     personal: "{{ lookup('env', 'HOME') }}/personal"
   pre_tasks:
-  - name: Update Apt
-    become: true
-    apt:
-      force_apt_get: true
-      update_cache: true
-      state: present
+  - name: Check if Homebrew is already installed
+    stat:
+      path: /usr/local/bin/brew
+    register: b
+    tags:
+      - core
+    - name: Install Homebrew
+      script: install-homebrew.sh
+      when: not b.stat.exists
+      tags:
+        - core
+  - name: Update homebrew
+    community.general.homebrew:
+      update_homebrew: true
     tags:
       - core
   tasks:
     - name: build ssh
-      ansible.builtin.include_tasks: tasks/ssh.yml
+      ansible.builtin.include_tasks: tasks/homebrew.yml
       tags:
-        - ssh
+        - homebrew
         - core
     - name: build git
       ansible.builtin.include_tasks: tasks/git.yml

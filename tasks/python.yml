@@ -1,7 +1,0 @@
-  - name: Install python
-    apt: name=python
-    tags:
-      - install
-      - python
-     
-

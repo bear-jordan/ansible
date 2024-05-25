@@ -1,6 +1,6 @@
   - name: Setup zsh
-    become: true
-    apt: name=zsh
+    community.general.homebrew:
+      name: zsh
     tags:
       - core
       - zsh
@@ -11,9 +11,8 @@
       - core
       - zsh
   - name: Install zoxide
-    become: true
-    apt:
-      name: ["zoxide", "fzf"]
+    community.general.homebrew:
+      name: zoxide,fzf
     tags:
       - core
       - zsh
