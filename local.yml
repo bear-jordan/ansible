@@ -1,3 +1,4 @@
+# Install brew
 # Run core
 # Run install
 
@@ -6,23 +7,6 @@
     source_key: "./.ssh/id_ed25519"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
     personal: "{{ lookup('env', 'HOME') }}/personal"
-  pre_tasks:
-  - name: Check if Homebrew is already installed
-    stat:
-      path: /usr/local/bin/brew
-    register: b
-    tags:
-      - core
-    - name: Install Homebrew
-      script: install-homebrew.sh
-      when: not b.stat.exists
-      tags:
-        - core
-  - name: Update homebrew
-    community.general.homebrew:
-      update_homebrew: true
-    tags:
-      - core
   tasks:
     - name: build ssh
       ansible.builtin.include_tasks: tasks/homebrew.yml
