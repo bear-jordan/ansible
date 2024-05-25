@@ -6,26 +6,14 @@
 - name: Get Lazy
   ansible.builtin.git:
     repo: 'https://github.com/folke/lazy.nvim.git'
-
     dest: "{{ lookup('env', 'HOME') }}/.local/share/nvim/lazy/lazy.nvim"
   tags:
     - install
     - nvim
 - name: Clone Neovim
-  ansible.builtin.git:
-    repo: 'https://github.com/neovim/neovim.git'
-    dest: "{{ lookup('env', 'HOME') }}/neovim"
+  community.general.homebrew
+    name: neovim
   tags:
     - install
     - nvim
-- name: Build neovim
-  shell: "cd {{ lookup('env', 'HOME') }}/neovim && make -j 20"
-  tags:
-    - install
-    - nvim
-- name: Install neovim
-  become: true
-  shell: "cd {{ lookup('env', 'HOME') }}/neovim && make install"
-  tags:
-    - install
     - nvim
