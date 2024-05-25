@@ -8,5 +8,6 @@
     tags: zsh
   - name: Install zoxide
     become: true
-    apt: zoxide
+    apt:
+    - name: zoxide
     tags: zsh
