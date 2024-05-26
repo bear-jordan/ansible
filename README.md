@@ -21,3 +21,4 @@
 17. Turn off automatically rearage spaces under desktop & dock > mission control
 18. Turn on yabai `yabai --start-service`
 18. Turn on skhd `skhd --start-service`
+20. Open and enable hyperkey
