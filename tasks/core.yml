@@ -1,5 +1,5 @@
 - name: Install System Packages
   community.general.homebrew:
-    name: make,unzip,htop,pyenv,virtualenv,iterm2
+    name: make,unzip,htop,pyenv,virtualenv,iterm2,koekeishiya/formulae/yabai,skhd,hyperkey
   tags:
     - core
