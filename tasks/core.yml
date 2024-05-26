@@ -1,5 +1,15 @@
 - name: Install System Packages
   community.general.homebrew:
-    name: make,unzip,htop,pyenv,virtualenv,iterm2,koekeishiya/formulae/yabai,skhd,hyperkey,tmux,tldr
+    name: make,unzip,htop,,iterm2,koekeishiya/formulae/yabai,skhd,hyperkey,tldr
+  tags:
+    - core
+- name: Install python
+  community.general.homebrew:
+    name: pyenv,virtualenv
+  tags:
+    - core
+- name: Install tmux
+  community.general.homebrew:
+    name: tmux,tpm
   tags:
     - core
