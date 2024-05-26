@@ -10,6 +10,6 @@
     - core
 - name: Install tmux
   community.general.homebrew:
-    name: tmux,tpm
+    name: tmux,tpm,urlview
   tags:
     - core
