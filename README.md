@@ -15,3 +15,9 @@
 11. Setup dotfiles from `~/.dotfiles` with ` stow .`
 12. Load iterm profile; use `C+shift+.` to show hidden files
 13. Set hotkeywindow preferences
+14. Open up mission control `ctrl+up` and open up several spaces
+15. Go to keyboard shortcuts > mission control > and enable shortcuts
+16. Turn on reduced motion in accessibility > display
+17. Turn off automatically rearage spaces under desktop & dock > mission control
+18. Turn on yabai `yabai --start-service`
+18. Turn on skhd `skhd --start-service`
