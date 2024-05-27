@@ -37,13 +37,8 @@
       tags:
         - dotfiles
         - install
-    - name: build productivity tools
-      ansible.builtin.include_tasks: tasks/productivity-tools.yml
+    - name: build obsidian
+      ansible.builtin.include_tasks: tasks/obsidian.yml
       tags:
-        - productivity-tools
-        - install
-    - name: build lsp
-      ansible.builtin.include_tasks: tasks/lsp.yml
-      tags:
-        - lsp
+        - obsidian
         - install

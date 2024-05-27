@@ -1,0 +1,15 @@
+- name: Create directory
+  ansible.builtin.file:
+    dest: "{{ lookup('env', 'HOME') }}/vaults/"
+    state: directory
+- name: Cloning obsidian
+  ansible.builtin.git:
+    repo: "git@github.com:bear-jordan/obsidian.git"
+    dest: "{{ lookup('env', 'HOME') }}/vaults/personal"
+    recursive: yes
+    update: yes
+    accept_hostkey: yes
+  tags:
+    - install
+    - obsidian
+
