@@ -4,7 +4,7 @@
 2. Run `install-first.sh`
 3. Restart terminal
 4. Install ansible with brew
-5. Run `ansible-playbook local.yml -t core --ask-vault-pass --ask-become-pass`
+5. Run `ansible-playbook local.yml -t base --ask-vault-pass --ask-become-pass`
 6. Change ssh keys to be owned by the user `chown <user:group> <file> ...`
 7. Setup ssh agent `ssh-agent bash`
 8. Add keys `ssh-add <private-key>`

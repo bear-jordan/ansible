@@ -12,26 +12,27 @@
       ansible.builtin.include_tasks: tasks/ssh.yml
       tags:
         - homebrew
-        - core
+        - base
     - name: build git
       ansible.builtin.include_tasks: tasks/git.yml
       tags:
         - git
-        - core
+        - base
     - name: build core
       ansible.builtin.include_tasks: tasks/core.yml
       tags:
         - core
+        - base
     - name: build zsh
       ansible.builtin.include_tasks: tasks/zsh.yml
       tags:
+        - base
         - zsh
-        - core
     - name: build nvim
       ansible.builtin.include_tasks: tasks/nvim.yml
       tags:
-        - nvim
         - install
+        - nvim
     - name: build dotfiles
       ansible.builtin.include_tasks: tasks/dotfiles.yml
       tags:
@@ -40,5 +41,5 @@
     - name: build obsidian
       ansible.builtin.include_tasks: tasks/obsidian.yml
       tags:
-        - obsidian
         - install
+        - obsidian
