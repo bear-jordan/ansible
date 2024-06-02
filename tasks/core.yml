@@ -1,6 +1,11 @@
 - name: Install System Packages
   community.general.homebrew:
-    name: make,unzip,htop,iterm2,koekeishiya/formulae/yabai,skhd,hyperkey,tldr
+    name: make,unzip,htop,iterm2,tldr
+  tags:
+    - core
+- name: Install Window Mangement
+  community.general.homebrew:
+    name: koekeishiya/formulae/yabai,skhd,hyperkey
   tags:
     - core
 - name: Install python
